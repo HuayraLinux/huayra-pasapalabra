@@ -1,2 +1,68 @@
-<html5>
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pasapalabra</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pasapalabra</h1>
+    </header>
+    <section>
+        <div id="letters" class="div_letter">
+            <span class="">A</span>
+            <span class="">B</span>
+            <span class="">C</span>
+            <span class="">D</span>
+            <span class="">E</span>
+            <span class="">F</span>
+            <span class="">G</span>
+            <span class="">H</span>
+            <span class="">I</span>
+            <span class="">J</span>
+            <span class="">K</span>
+            <span class="">L</span>
+            <span class="">M</span>
+            <span class="">N</span>
+            <span class="">Ñ</span>
+            <span class="">O</span>
+            <span class="">P</span>
+            <span class="">Q</span>
+            <span class="">R</span>
+            <span class="">S</span>
+            <span class="">T</span>
+            <span class="">U</span>
+            <span class="">V</span>
+            <span class="">W</span>
+            <span class="">X</span>
+            <span class="">Y</span>
+            <span class="">Z</span>
+        </div>
+        <button id="jugar">Play</button>
+        <div id="partida" class="hidden">
+            <div id="div_question">
+                <h2 id="letter">Cargando</h2>
+                <h3 id="definition">Cargando</h3>
+                <input id="word" type="text" name="" autocomplete="off" placeholder="Escribir la palabra">
+                <button id="send">Ok</button>
+                <button id="pasapalabra">Pasapalabra</button>
+            </div>
+        </div>
+        <div id="terminado" class="hidden">
+            <div>
+                <h2>Puntación:</h2>
+                <h3><span id="marcador">0</span> de 27 palabras.</h3>
+            </div>
+            <button id="volver a jugar">Volver a jugar</button>
+        </div>
+    </section>
+
+</body>
+
+</html>
