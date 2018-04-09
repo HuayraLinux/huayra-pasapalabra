@@ -6,6 +6,27 @@ window.onload = function () {
 }
 var correct = 0
 var positionLetter
+
+
+function realizaProceso(valorCaja1, valorCaja2){
+        var parametros = {
+                "valorCaja1" : valorCaja1,
+                "valorCaja2" : valorCaja2
+        };
+        $.ajax({
+                data:  parametros,
+                url:   'http://localhost:8000/pasapalabra.php',
+                type:  'post',
+                beforeSend: function () {
+                        $("#resultado").html("Procesando, espere por favor...");
+                },
+                success:  function (response) {
+                        $("#resultado").html(response);
+                }
+        });
+}
+
+
 function obtenerElement (name) {
   return document.getElementById(name)
 }
@@ -92,6 +113,11 @@ function posicionPalabra (palabraNull) {
   }
   return position
 }
+
+
+
+/*  En esta función chequea si la palabra es la correcta  */ 
+
 function comprobarRespuesta () {
   var userinput = obtenerElement('word').value
   var p = palabras.splice(positionLetter, 1)[0]
@@ -114,6 +140,10 @@ function comprobarRespuesta () {
   palabras.push(p)
   seguirJugando()
 }
+
+
+
+
 function pasaPalabra () {
   var p = palabras.splice(positionLetter, 1)[0]
   palabras.push(p)
